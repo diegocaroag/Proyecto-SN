@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Docentes - EDGMS</title>
+    <!-- Vinculamos tu archivo de estilos unificado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="cuerpo-dashboard-figma">
+
+    <div class="layout-dashboard">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar-figma">
+            <div class="logo-area">
+                <img src="assets/img/log.jpg" alt="EDGMS Logo" class="logo-sidebar">
+                <span class="titulo-sidebar">EDGMS</span>
+            </div>
+
+            <nav class="menu-navegacion">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="icono">🏠</span> Inicio
+                </a>
+                <a href="progreso.html" class="menu-item">
+                    <span class="icono">📈</span> Mi Progreso
+                </a>
+                <a href="actividades.html" class="menu-item activo">
+                    <span class="icono">📋</span> Actividades docentes
+                </a>
+                <a href="desafios.html" class="menu-item">
+                    <span class="icono">🏆</span> Desafíos
+                </a>
+            </nav>
+
+            <div class="ayuda-sidebar">
+                <p class="titulo-ayuda">¿Necesitas ayuda?</p>
+                <p class="texto-ayuda">Consulta la guía rápida para seguir aprendiendo.</p>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal-figma">
+            
+            <!-- HEADER SUPERIOR -->
+            <header class="header-superior-figma">
+                <div class="saludo-box">
+                    <h1>Actividades Docentes 📋</h1>
+                    <p>Gestiona y entrega tus talleres, quices y trabajos asignados.</p>
+                </div>
+                
+                <div class="metricas-usuario">
+                    <div class="metrica-badge racha">
+                        🔥 <span id="racha-dias">7 días</span>
+                    </div>
+                    <div class="metrica-badge puntos">
+                        💎 <span id="puntos-totales">1.280 pts</span>
+                    </div>
+                    <div class="perfil-avatar-container">
+                        <a href="dashboard.html" id="btn-inicio" title="Inicio">
+                            <img src="assets/img/log.jpg" alt="Perfil" class="avatar-img">
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- FILTROS DE ACTIVIDADES -->
+            <section class="filtros-actividades">
+                <button class="filtro-btn activo">Todas (3)</button>
+                <button class="filtro-btn">Pendientes (2)</button>
+                <button class="filtro-btn">Completadas (1)</button>
+            </section>
+
+            <!-- LISTADO COMPLETO DE ACTIVIDADES -->
+            <section class="lista-actividades-completa">
+                
+                <!-- Tarjeta 1 -->
+                <div class="tarjeta-actividad">
+                    <div class="actividad-icono algebra">📐</div>
+                    <div class="actividad-info">
+                        <h3>Taller de Álgebra — Prof. Ramírez</h3>
+                        <p>12 ejercicios · vence hoy a las 11:59 PM</p>
+                    </div>
+                    <span class="badge-estado pendiente">Pendiente</span>
+                    <button class="boton-accion cyan">Empezar</button>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="tarjeta-actividad">
+                    <div class="actividad-icono sociales">🌍</div>
+                    <div class="actividad-info">
+                        <h3>Quiz de Sociales — Prof. Mendoza</h3>
+                        <p>8 preguntas · 15 min · vence mañana</p>
+                    </div>
+                    <span class="badge-estado pendiente">Pendiente</span>
+                    <button class="boton-accion cyan">Empezar</button>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="tarjeta-actividad">
+                    <div class="actividad-icono ingles">🗣️</div>
+                    <div class="actividad-info">
+                        <h3>Repaso de Inglés — Prof. Salazar</h3>
+                        <p>Completado ayer · Calificación: 92%</p>
+                    </div>
+                    <span class="badge-estado completado">Completado</span>
+                    <button class="boton-accion azul-claro">Revisar</button>
+                </div>
+
+                <!-- Tarjeta 4 (Extra para simular contenido completo) -->
+                <div class="tarjeta-actividad">
+                    <div class="actividad-icono ciencias">🧪</div>
+                    <div class="actividad-info">
+                        <h3>Laboratorio Virtual de Química — Prof. Gómez</h3>
+                        <p>5 experimentos · vence en 3 días</p>
+                    </div>
+                    <span class="badge-estado pendiente">Pendiente</span>
+                    <button class="boton-accion cyan">Empezar</button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>

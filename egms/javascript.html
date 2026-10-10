@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebLab | JavaScript</title><link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="dashboard-body">
+<header class="dashboard-header"><a class="marca" href="dashboard.html">WebLab</a><div><a class="boton boton-pequeno boton-secundario" href="dashboard.html">Volver al panel</a></div></header>
+<div class="dashboard-layout">
+<aside class="sidebar"><nav aria-label="Menú del aula"><ul>
+<li><a href="dashboard.html">Resumen</a></li><li><a  href="html.html">HTML5</a></li>
+<li><a  href="css.html">CSS3</a></li><li><a class='activo' href="javascript.html">JavaScript</a></li><li><a href="formulario.html">Formulario</a></li>
+</ul></nav></aside>
+<main class="dashboard-main contenido-curso"><article>
+<p class="eyebrow">Módulo 3 · Comportamiento</p><h1>JavaScript</h1><p class="lead">JavaScript agrega lógica, eventos e interacción al documento HTML.</p>
+<section><h2>1. ¿Qué es JavaScript?</h2><p>JavaScript es un lenguaje de programación que permite agregar lógica e interacción a una página: responder a clics, validar formularios, modificar contenido y trabajar con datos.</p>
+<pre><code>&lt;script src="js/app.js"&gt;&lt;/script&gt;</code></pre><p>En este proyecto los scripts se ubican al final del <code>body</code> para que el HTML esté disponible antes de ejecutar el código.</p></section>
+<section><h2>2. Variables y constantes</h2>
+<pre><code>let contador = 0;
+const nombreCurso = "JavaScript";</code></pre>
+<p><code>let</code> declara una variable cuyo valor puede cambiar. <code>const</code> declara una referencia que no se reasigna. Para código moderno se prefieren sobre <code>var</code>.</p></section>
+<section><h2>3. Tipos de datos básicos</h2><ul><li><code>string</code>: texto.</li><li><code>number</code>: números.</li><li><code>boolean</code>: <code>true</code> o <code>false</code>.</li><li><code>null</code>: ausencia intencional de valor.</li><li><code>undefined</code>: valor no definido.</li><li><code>object</code>: colección estructurada de datos.</li><li><code>array</code>: lista de valores.</li></ul>
+<pre><code>const aprendiz = {
+  nombre: "Ana",
+  activo: true
+};
+const temas = ["HTML", "CSS", "JavaScript"];</code></pre></section>
+<section><h2>4. Operadores</h2><p>Hay operadores aritméticos (<code>+ - * / %</code>), comparación (<code>=== !== &gt; &lt; &gt;= &lt;=</code>) y lógicos (<code>&& || !</code>).</p>
+<pre><code>const edad = 20;
+const puedeIngresar = edad >= 18 && edad < 100;</code></pre></section>
+<section><h2>5. Condicionales</h2>
+<pre><code>if (nota >= 70) {
+  console.log("Aprobado");
+} else {
+  console.log("Debe reforzar");
+}</code></pre>
+<p>También existe <code>switch</code> para seleccionar entre varios casos claramente definidos.</p></section>
+<section><h2>6. Ciclos</h2>
+<pre><code>const temas = ["HTML", "CSS", "JS"];
+for (const tema of temas) {
+  console.log(tema);
+}</code></pre>
+<p><code>for</code>, <code>while</code> y métodos de arreglos permiten repetir operaciones. Deben utilizarse cuando realmente existe una colección o repetición.</p></section>
+<section><h2>7. Funciones</h2><p>Una función agrupa instrucciones reutilizables y puede recibir parámetros y devolver un resultado.</p>
+<pre><code>function calcularSubtotal(cantidad, precio) {
+  return cantidad * precio;
+}
+const subtotal = calcularSubtotal(3, 25000);</code></pre>
+<p>También existen funciones flecha:</p><pre><code>const saludar = nombre => `Hola, ${nombre}`;</code></pre></section>
+<section><h2>8. DOM: conectar JavaScript con HTML</h2><p>El <strong>DOM (Document Object Model)</strong> representa el documento HTML como objetos que JavaScript puede consultar y modificar.</p>
+<pre><code>const titulo = document.querySelector("#titulo");
+titulo.textContent = "Nuevo título";
+titulo.classList.add("destacado");</code></pre>
+<p>Selectores frecuentes: <code>getElementById()</code>, <code>querySelector()</code> y <code>querySelectorAll()</code>.</p></section>
+<section><h2>9. Eventos</h2><p>Un evento informa que ocurrió una acción, por ejemplo un clic, una escritura o el envío de un formulario.</p>
+<pre><code>const boton = document.querySelector("#guardar");
+boton.addEventListener("click", function () {
+  alert("Guardado");
+});</code></pre>
+<p>Eventos frecuentes: <code>click</code>, <code>submit</code>, <code>input</code>, <code>change</code>, <code>keydown</code>.</p></section>
+<section><h2>10. Formularios y validación</h2>
+<pre><code>const formulario = document.querySelector("#registro");
+
+formulario.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+
+  const nombre = document.querySelector("#nombre").value.trim();
+
+  if (nombre.length < 3) {
+    mostrarError("El nombre debe tener mínimo 3 caracteres");
+    return;
+  }
+
+  console.log("Formulario válido");
+});</code></pre>
+<p><code>preventDefault()</code> evita temporalmente el comportamiento normal del envío para poder validar. JavaScript complementa, no reemplaza, las validaciones HTML ni la validación que posteriormente debe realizar un servidor.</p></section>
+<section><h2>11. Manipulación de clases</h2>
+<pre><code>const menu = document.querySelector(".menu");
+menu.classList.toggle("abierto");</code></pre>
+<p>Esta técnica permite que JavaScript cambie estados mientras CSS decide cómo se visualizan.</p></section>
+<section><h2>12. localStorage</h2><p>Permite guardar pequeñas cadenas de datos en el navegador. En WebLab se usa únicamente para simular una sesión didáctica.</p>
+<pre><code>localStorage.setItem("sesion", "activa");
+const sesion = localStorage.getItem("sesion");
+localStorage.removeItem("sesion");</code></pre>
+<div class="nota"><strong>Importante:</strong> <code>localStorage</code> no debe utilizarse para almacenar contraseñas ni reemplaza una autenticación real con servidor.</div></section>
+<section><h2>13. El carrusel de este proyecto</h2><p>El Home utiliza un arreglo implícito de elementos seleccionados del DOM, una variable para conocer la posición actual, eventos en botones y clases CSS para mostrar u ocultar diapositivas. Revisa <code>js/home.js</code> e identifica cada concepto.</p></section>
+<section><h2>14. Buenas prácticas</h2><ul><li>Usar <code>const</code> por defecto y <code>let</code> cuando haya reasignación.</li><li>Nombrar variables y funciones según su propósito.</li><li>Dividir problemas grandes en funciones pequeñas.</li><li>No mezclar innecesariamente JavaScript dentro del HTML.</li><li>Validar entradas y mostrar mensajes comprensibles.</li><li>No almacenar credenciales reales en JavaScript del navegador.</li></ul></section>
+<section><h2>15. Errores frecuentes</h2><ul><li>Confundir <code>=</code> con comparación.</li><li>Buscar un elemento con un selector que no existe.</li><li>Olvidar <code>preventDefault()</code> cuando se quiere validar antes de enviar.</li><li>Modificar estilos directamente desde JS cuando bastaría con agregar/quitar una clase.</li><li>Confiar únicamente en validación del navegador para una aplicación real.</li></ul></section>
+<section class="reto"><h2>Reto JavaScript</h2><p>Agrega al formulario de clientes validación de nombre, correo y documento. Cuando todo sea válido, muestra un mensaje de éxito sin recargar la página. Como función dinámica adicional, crea un botón que permita mostrar u ocultar un resumen de los datos ingresados.</p></section>
+
+</article></main></div>
+<script src="js/dashboard.js"></script></body></html>

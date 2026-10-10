@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafíos - EDGMS</title>
+    <!-- Vinculamos tu archivo de estilos unificado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="cuerpo-dashboard-figma">
+
+    <div class="layout-dashboard">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar-figma">
+            <div class="logo-area">
+                <img src="assets/img/log.jpg" alt="EDGMS Logo" class="logo-sidebar">
+                <span class="titulo-sidebar">EDGMS</span>
+            </div>
+
+            <nav class="menu-navegacion">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="icono">🏠</span> <span>Inicio</span>
+                </a>
+                <a href="progreso.html" class="menu-item">
+                    <span class="icono">📈</span> <span>Mi Progreso</span>
+                </a>
+                <a href="actividades.html" class="menu-item">
+                    <span class="icono">📋</span> <span>Actividades docentes</span>
+                </a>
+                <a href="desafios.html" class="menu-item activo">
+                    <span class="icono">🏆</span> <span>Desafíos</span>
+                </a>
+            </nav>
+
+            <div class="ayuda-sidebar">
+                <p class="titulo-ayuda">¿Necesitas ayuda?</p>
+                <p class="texto-ayuda">Consulta la guía rápida para seguir aprendiendo.</p>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal-figma">
+            
+            <!-- HEADER SUPERIOR -->
+            <header class="header-superior-figma">
+                <div class="saludo-box">
+                    <h1>Desafíos Activos ⚡</h1>
+                    <p>Compite, pon a prueba tus habilidades y gana puntos extra para tu perfil.</p>
+                </div>
+                
+                <div class="metricas-usuario">
+                    <div class="metrica-badge racha">
+                        🔥 <span>7 días</span>
+                    </div>
+                    <div class="metrica-badge puntos">
+                        💎 <span>1.280 pts</span>
+                    </div>
+                    <div class="perfil-avatar-container">
+                        <a href="dashboard.html" title="Inicio">
+                            <img src="assets/img/log.jpg" alt="Inicio" class="avatar-img">
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SECCIÓN DE DESAFÍOS (ADAPTADA AL FORMATO DE TARJETAS) -->
+            <div class="grid-inferior-figma" style="grid-template-columns: 1fr;">
+                <div class="columna-actividades" style="width: 100%;">
+                    <div class="seccion-titulo-row">
+                        <h2>Desafíos Disponibles</h2>
+                        <span style="font-size: 14px; color: #6e6e73; font-weight: 600;">3 desafíos en total</span>
+                    </div>
+
+                    <!-- Tarjeta Desafío 1 -->
+                    <div class="tarjeta-actividad">
+                        <div class="actividad-icono algebra" style="background: rgba(0,113,227,0.1); color: #0071e3;">⚡</div>
+                        <div class="actividad-info">
+                            <h3>Maratón de Código SQL — Nivel Intermedio</h3>
+                            <p>Resuelve 5 consultas complejas con triggers y funciones en menos de 15 minutos.</p>
+                        </div>
+                        <span class="badge-estado pendiente">Disponible</span>
+                        <button class="boton-accion cyan">Aceptar</button>
+                    </div>
+
+                    <!-- Tarjeta Desafío 2 -->
+                    <div class="tarjeta-actividad">
+                        <div class="actividad-icono sociales" style="background: rgba(239,68,68,0.1); color: #ef4444;">🎨</div>
+                        <div class="actividad-info">
+                            <h3>Diseño Glassmorphism UI — Nivel Avanzado</h3>
+                            <p>Replica un componente de tarjeta con efectos de desenfoque y Tailwind CSS.</p>
+                        </div>
+                        <span class="badge-estado pendiente">Disponible</span>
+                        <button class="boton-accion cyan">Aceptar</button>
+                    </div>
+
+                    <!-- Tarjeta Desafío 3 -->
+                    <div class="tarjeta-actividad">
+                        <div class="actividad-icono ingles" style="background: rgba(16,185,129,0.1); color: #10b981;">🧩</div>
+                        <div class="actividad-info">
+                            <h3>Trivia de Lógica — Nivel Principiante</h3>
+                            <p>Demuestra tu agilidad mental respondiendo preguntas rápidas de programación.</p>
+                        </div>
+                        <span class="badge-estado completado">Completado</span>
+                        <button class="boton-accion azul-claro">Revisar</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Script de validación y sesión -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDGMS - Aula Nativa</title>
+    <!-- Hoja de estilos en español -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1.BARRA -->
+    <header>
+        <div class="barra-navegacion">
+            <div class="logo-contenedor">
+                <img src="assets/img/log.jpg" alt="Logo EDGMS" class="logo-imagen" style="width: 40px; height: 40px; object-fit: contain;">
+                <span class="texto-logo">EDGMS</span>
+            </div>
+            <nav class="enlaces-menu">
+                <a href="#">Inicio</a>
+                <a href="#">Sobre el proyecto</a>
+                <a href="#">Cómo funciona</a>
+            </nav>
+            <div>
+                <a href="login.html" class="boton-secundario">Iniciar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. SECCIÓN HERO -->
+        <section class="seccion-hero">
+            <div class="contenido-hero">
+                <h1>Aprende jugando</h1>
+                <p>Una experiencia educativa que convierte cada concepto en un reto claro, entretenido y conectado con tu progreso.</p>
+                
+                <div class="botones-hero">
+                    <a href="ruta.html" class="boton-principal">Probar demostración</a>
+                    <a href="dashboard.html" class="boton-secundario" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span>Ingresar</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <div class="nota-hero">
+                    <span class="punto-nota"></span>
+                    <span>Sin descargas • Acceso a tu ritmo</span>
+                </div>
+            </div>
+            <div class="contenedor-tarjeta-hero">
+                
+                <!-- Tarjeta Unidad 4 (Interactiva) -->
+                <div class="tarjeta-simulacion" data-correcta="56">
+                    <div class="encabezado-simulacion">
+                        <span>UNIDAD 4</span>
+                        <span class="xp-simulacion">120 XP</span>
+                    </div>
+                    <p class="pregunta-simulacion">¿Cuánto es 8 &times; 7?</p>
+                    <div class="opciones-simulacion">
+                        <button class="opcion-sim" type="button">54</button>
+                        <button class="opcion-sim" type="button">56</button>
+                        <button class="opcion-sim" type="button">64</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Unidad 10 (Interactiva) -->
+                <div class="tarjeta-simulacion" data-correcta="Amazonas">
+                    <div class="encabezado-simulacion">
+                        <span>UNIDAD 10</span>
+                        <span class="xp-simulacion">155 XP</span>
+                    </div>
+                    <p class="pregunta-simulacion">¿Cuál es el río más largo del mundo?</p>
+                    <div class="opciones-simulacion">
+                        <button class="opcion-sim" type="button">Nilo</button>
+                        <button class="opcion-sim" type="button">Amazonas</button>
+                        <button class="opcion-sim" type="button">Orinoco</button>
+                    </div>
+                </div>
+
+                <!-- Insignia de Racha dentro del contenedor -->
+                <div class="racha-badge">
+                    🔥 Racha de 7 días
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3.TRES PASOS -->
+        <section class="seccion-pasos">
+            <div class="subtitulo-seccion">CÓMO SE USA</div>
+            <h2 class="titulo-seccion">Tres pasos para empezar a avanzar</h2>
+            <p class="descripcion-seccion">Una ruta simple que acompaña cada práctica y celebra cada logro.</p>
+
+            <div class="rejilla-pasos">
+                <div class="tarjeta-paso">
+                    <div class="icono-paso">🎯</div>
+                    <span class="numero-paso">PASO 01</span>
+                    <h3 class="titulo-paso">Elige tu grado o nivel</h3>
+                    <p class="texto-paso">Selecciona Primaria o Bachillerato y recibe una ruta adaptada a ti.</p>
+                </div>
+
+                <div class="tarjeta-paso">
+                    <div class="icono-paso">✏️</div>
+                    <span class="numero-paso">PASO 02</span>
+                    <h3 class="titulo-paso">Completa desafíos</h3>
+                    <p class="texto-paso">Aprende con lecciones breves, visuales e interactivas.</p>
+                </div>
+
+                <div class="tarjeta-paso">
+                    <div class="icono-paso">⭐</div>
+                    <span class="numero-paso">PASO 03</span>
+                    <h3 class="titulo-paso">Suma puntos y rachas</h3>
+                    <p class="texto-paso">Acumula puntos y mantén tu racha diaria mientras avanzas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROGRESO -->
+        <section class="seccion-franja-oscura">
+            <div class="contenedor-franja-oscura">
+                <div class="tarjeta-previa-oscura">
+                    <div style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 1rem;">Tu progreso esta semana</div>
+                    <div style="margin-bottom: 0.75rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #d1d5db; margin-bottom: 0.25rem;">
+                            <span>Matemáticas</span><span>85%</span>
+                        </div>
+                        <div style="background-color: #374151; height: 6px; border-radius: 3px; overflow: hidden;">
+                            <div style="background-color: #22d3ee; width: 85%; height: 100%;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 0.75rem;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #d1d5db; margin-bottom: 0.25rem;">
+                            <span>Ciencias Naturales</span><span>90%</span>
+                        </div>
+                        <div style="background-color: #374151; height: 6px; border-radius: 3px; overflow: hidden;">
+                            <div style="background-color: #22d3ee; width: 90%; height: 100%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #d1d5db; margin-bottom: 0.25rem;">
+                            <span>Pensamiento lógico</span><span>80%</span>
+                        </div>
+                        <div style="background-color: #374151; height: 6px; border-radius: 3px; overflow: hidden;">
+                            <div style="background-color: #22d3ee; width: 80%; height: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span style="font-size: 0.7rem; color: #22d3ee; font-weight: 700; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">APRENDIZAJE CON PROPÓSITO</span>
+                    <h2 style="font-size: 1.75rem; font-weight: 800; color: white; margin-bottom: 1.5rem; line-height: 1.2;">Práctica corta, progreso visible y retroalimentación inmediata</h2>
+                    
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #d1d5db; font-size: 0.875rem;">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="color: #22d3ee;">✔</span> Rutas alineadas a cada grado y nivel
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="color: #22d3ee;">✔</span> Retos que fortalecen la comprensión, no la memoria
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="color: #22d3ee;">✔</span> Recompensas que motivan sin distraer del aprendizaje
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LLAMADO FINAL -->
+        <section class="seccion-cta-final">
+            <h2>Tu próxima conquista empieza hoy</h2>
+            <p>Explora la demostración y descubre una forma más clara de aprender.</p>
+            <a href="ruta.html" class="boton-principal" style="display: inline-block;">Probar demostración</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenedor-footer">
+           <div class="logo-contenedor">
+             <img src="assets/img/log.jpg" alt="Logo EDGMS" class="logo-imagen">
+                <span style="font-weight: bold; font-size: 0.9rem;">EDGMS</span>
+             </div>
+            <div class="enlaces-footer">
+                <a href="#">Proyectos adaptados</a>
+                <a href="#">Metodologías</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div style="font-size: 0.75rem; color: #9ca3af;">
+                © 2026 edgms • Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript para la interactividad -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
