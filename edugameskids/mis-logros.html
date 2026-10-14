@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Mis logros</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-mis-logros.css">
+</head>
+<body>
+  <div class="logros-screen">
+
+    <!-- HEADER / NAVEGACIÓN PRINCIPAL -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link" href="dashboardEstudiante.html">Inicio</a>
+          <a class="nav-link" href="actividades.html">Actividades</a>
+          <a class="nav-link active" href="#" aria-current="page">Mis logros</a>
+        </nav>
+
+        <div class="user-profile">
+          <div class="avatar-box">
+            <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="custom-icon">
+          </div>
+          <span class="user-name">Sofi</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- ENCABEZADO DE LA SECCIÓN -->
+      <section class="section-header">
+        <h1 class="main-title">Mis logros</h1>
+        <p class="main-subtitle">¡Mira cuánto has aprendido, Sofi! Cada intento cuenta en tu aventura.</p>
+      </section>
+
+      <!-- RESUMEN EN 3 TARJETAS (NIVEL, PUNTOS, INSIGNIAS) -->
+      <section class="summary-cards">
+
+        <!-- TARJETA 1: NIVEL -->
+        <article class="card level-card">
+          <div class="level-badge-number">4</div>
+          <div class="level-details">
+            <h2 class="card-headline">Nivel 4</h2>
+            <p class="level-role">Exploradora curiosa</p>
+            <span class="sub-link">Tu aventura de hoy: 64%</span>
+          </div>
+        </article>
+
+        <!-- TARJETA 2: PUNTOS -->
+        <article class="card points-card">
+          <div class="points-header">
+            <div class="points-title-group">
+              <span class="star-icon">⭐</span>
+              <span class="points-num">240 puntos</span>
+            </div>
+            <span class="points-ratio">240 / 300</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill fill-orange" style="width: 80%;"></div>
+          </div>
+          <p class="points-note">¡Solo faltan 60 puntos para el nivel 5!</p>
+        </article>
+
+        <!-- TARJETA 3: INSIGNIAS -->
+        <article class="card badges-summary-card">
+          <div class="badge-icon-box">
+            <img src="assets/icons/badge-icon.svg" alt="Insignia" class="summary-badge-img">
+          </div>
+          <div class="badges-details">
+            <span class="badges-count">3 insignias</span>
+            <span class="badges-status">obtenidas</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SECCIÓN DE COMPARATIVAS (2 COLUMNAS) -->
+      <section class="comparison-section">
+
+        <!-- COLUMNA IZQUIERDA: TU AVANCE POR MATERIA -->
+        <article class="card tracking-card">
+          <h2 class="card-title">Tu avance por materia</h2>
+          <p class="card-subtitle">Aciertos en la última actividad de cada materia.</p>
+
+          <div class="subject-list">
+            
+            <!-- MATEMÁTICAS -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-blue">÷</div>
+                  <span>Matemáticas</span>
+                </div>
+                <span class="subject-percent">90%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 90%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">9 de 10 aciertos · Sobresaliente</span>
+                <span class="status-tag status-blue">¡Buen avance!</span>
+              </div>
+            </div>
+
+            <!-- LECTURA -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-orange">Aa</div>
+                  <span>Lectura</span>
+                </div>
+                <span class="subject-percent">75%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 75%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">6 de 8 aciertos · Sigue leyendo</span>
+                <span class="status-tag status-blue">¡Buen avance!</span>
+              </div>
+            </div>
+
+            <!-- CIENCIAS -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-green">✦</div>
+                  <span>Ciencias</span>
+                </div>
+                <span class="subject-percent">50%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 50%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">4 de 8 aciertos · Repasa animales y plantas</span>
+                <span class="status-tag status-gray">Por practicar</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- COLUMNA DERECHA: ASÍ ESTÁS MEJORANDO -->
+        <article class="card tracking-card">
+          <h2 class="card-title">Así estás mejorando</h2>
+          <p class="card-subtitle">Tus aciertos: intento anterior ➔ último intento.</p>
+
+          <div class="subject-list">
+
+            <!-- AVENTURA MATEMÁTICA -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-blue">÷</div>
+                  <span>Aventura matemática</span>
+                </div>
+                <span class="subject-percent">90%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 90%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">70% ➔ 90% · +20 puntos porcentuales</span>
+                <span class="status-tag status-blue">¡Buen avance!</span>
+              </div>
+            </div>
+
+            <!-- PALABRAS MÁGICAS -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-orange">Aa</div>
+                  <span>Palabras mágicas</span>
+                </div>
+                <span class="subject-percent">75%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 75%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">50% ➔ 75% · +25 puntos porcentuales</span>
+                <span class="status-tag status-blue">¡Buen avance!</span>
+              </div>
+            </div>
+
+            <!-- MUNDO DE LAS CIENCIAS -->
+            <div class="subject-item">
+              <div class="subject-top">
+                <div class="subject-name">
+                  <div class="icon-circle icon-green">✦</div>
+                  <span>Mundo de las ciencias</span>
+                </div>
+                <span class="subject-percent">50%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill fill-blue" style="width: 50%;"></div>
+              </div>
+              <div class="subject-bottom">
+                <span class="subject-desc">37,5% ➔ 50% · +12,5 puntos porcentuales</span>
+                <span class="status-tag status-gray">Por practicar</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SECCIÓN INFERIOR: COLECCIÓN Y RECOMENDACIÓN -->
+      <section class="bottom-section">
+
+        <!-- MI COLECCIÓN -->
+        <article class="card collection-card">
+          <div class="collection-header">
+            <h2 class="card-title">Mi colección</h2>
+            <span class="badge-count-pill">3 insignias obtenidas</span>
+          </div>
+
+          <div class="badges-row">
+            
+            <div class="badge-item">
+              <div class="badge-circle icon-blue-light">
+                <span class="flag-icon">🚩</span>
+              </div>
+              <span class="badge-label">Primer reto</span>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-circle icon-green-light">
+                <span class="star-sparkle">✨</span>
+              </div>
+              <span class="badge-label">Gran curiosidad</span>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-circle icon-purple-light">
+                <span class="star-outline">⭐</span>
+              </div>
+              <span class="badge-label">Sigo intentando</span>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- LLAMADO A PRACTICAR -->
+        <article class="card action-card">
+          <h2 class="card-title">Un poquito de práctica, un gran paso</h2>
+          <p class="action-desc">Prueba Ciencias o repasa las multiplicaciones de tu último reto.</p>
+
+          <div class="action-buttons">
+            <a href="actividades.html" class="btn-primary-action">
+              <span>➔ Seguir practicando</span>
+            </a>
+            <a href="actividades.html" class="btn-secondary-action">Ver actividades</a>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- NOTA DE EJEMPLO DE DATOS FOOTER -->
+      <footer class="data-note-footer">
+        <span>Datos de ejemplo · Así podría verse tu aventura de aprendizaje.</span>
+        <span class="slogan-right">Jugar. Descubrir. Aprender.</span>
+      </footer>
+
+    </main>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>

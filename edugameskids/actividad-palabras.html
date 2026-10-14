@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Palabras mágicas</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-actividad-palabras.css">
+</head>
+<body>
+  <div class="activity-screen">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+      <div class="header-content">
+        <a href="dashboardEstudiante.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link" href="dashboardEstudiante.html">Inicio</a>
+          <a class="nav-link active" href="actividades.html" aria-current="page">Actividades</a>
+          <a class="nav-link" href="mis-logros.html">Mis logros</a>
+        </nav>
+
+        <div class="user-profile">
+          <div class="avatar-box">
+            <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="custom-icon">
+          </div>
+        
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- ENCABEZADO DE RETROCESO Y TÍTULO DE ACTIVIDAD -->
+      <div class="top-activity-header">
+        <a href="actividades.html" class="back-link">
+          <span>←</span> Volver a actividades <span class="separator">/</span> <span class="sub-category">Lectura</span>
+        </a>
+      </div>
+
+      <section class="activity-hero-card">
+        <div class="hero-info">
+          <h1 class="activity-main-title">Palabras mágicas</h1>
+          <p class="activity-main-desc">Lectura y vocabulario · Descubre palabras con el mismo significado.</p>
+        </div>
+        <div class="activity-tag-badge">
+          <span>✨ Actividad interactiva</span>
+        </div>
+      </section>
+
+      <!-- BARRA DE PROGRESO -->
+      <section class="progress-question-bar">
+        <span class="question-counter-text" id="texto-contador">Pregunta 1 de 9</span>
+        <div class="activity-progress-track">
+          <div class="activity-progress-fill" id="barra-progreso" style="width: 11.1%;"></div>
+        </div>
+        <span class="question-total-text" id="texto-progreso-num">1/9</span>
+      </section>
+
+      <!-- CONTENEDOR DE DOS COLUMNAS (QUIZ) -->
+      <div class="activity-grid-layout" id="quiz-container">
+
+        <!-- LADO IZQUIERDO: TARJETA ¡ACTIVA TU MAGIA! -->
+        <aside class="left-mission-card">
+          <div class="mission-icon-box">
+            <img src="assets/icons/abc-icon.svg" alt="Icono Actividad" class="mission-img-icon">
+          </div>
+          <h2 class="mission-title">¡Activa tu magia!</h2>
+          <p class="mission-desc">
+            Lee la pregunta con calma. Elige una sola respuesta y pulsa «Comprobar respuesta».
+          </p>
+          <div class="mission-tip-box">
+            <span class="tip-heart">💜</span>
+            <p class="tip-text">No hay prisa. Equivocarse también es una forma de aprender.</p>
+          </div>
+          <p class="mission-footer-text">Tu misión: reconocer palabras y sinónimos.</p>
+        </aside>
+
+        <!-- LADO DERECHO: PREGUNTA Y OPCIONES -->
+        <section class="right-question-card">
+          
+          <div class="question-category-tag" id="pregunta-categoria">Encuentra el sinónimo</div>
+          <h2 class="question-title" id="pregunta-texto">¿Qué palabra significa lo mismo que feliz?</h2>
+          <p class="question-subtitle">Selecciona la palabra que tiene el mismo significado.</p>
+
+          <!-- OPCIONES DE RESPUESTA (GRID DE 2x2) -->
+          <div class="options-grid" id="opciones-grid-container">
+            
+            <div class="option-card" data-index="0" onclick="seleccionarOpcion(0)">
+              <div class="option-letter">A</div>
+              <span class="option-text" id="opt-text-0">Triste</span>
+              <div class="option-radio"></div>
+            </div>
+
+            <div class="option-card" data-index="1" onclick="seleccionarOpcion(1)">
+              <div class="option-letter">B</div>
+              <span class="option-text" id="opt-text-1">Alegre</span>
+              <div class="option-radio"></div>
+            </div>
+
+            <div class="option-card" data-index="2" onclick="seleccionarOpcion(2)">
+              <div class="option-letter">C</div>
+              <span class="option-text" id="opt-text-2">Lento</span>
+              <div class="option-radio"></div>
+            </div>
+
+            <div class="option-card" data-index="3" onclick="seleccionarOpcion(3)">
+              <div class="option-letter">D</div>
+              <span class="option-text" id="opt-text-3">Frío</span>
+              <div class="option-radio"></div>
+            </div>
+
+          </div>
+
+          <!-- CAJITA DE ESTADO / AYUDA INFERIOR -->
+          <div class="feedback-action-box">
+            <div class="feedback-prompt-text">
+              <span class="prompt-icon">✈️</span>
+              <div>
+                <strong>¿Ya encontraste tu palabra?</strong>
+                <p>Elige una opción para poder comprobar tu respuesta.</p>
+              </div>
+            </div>
+            <div class="status-helper-row">
+              <span class="status-msg" id="status-msg">Ninguna respuesta seleccionada</span>
+              <button class="btn-check-answer" id="btn-comprobar" disabled onclick="comprobarRespuesta()">
+                Comprobar respuesta <span class="check-symbol">✓</span>
+              </button>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- CONTENEDOR DE RESULTADO FINAL (Oculto al inicio) -->
+      <div id="resultado-container" style="display: none; text-align: center; padding: 40px; background: rgba(255,255,255,0.03); border-radius: 16px; margin-top: 20px;"></div>
+
+      <!-- NOTA DE PIE DE PÁGINA -->
+      <footer class="activity-footer-note">
+        <span>Actividad interactiva · EduGamesKids</span>
+      </footer>
+
+    </main>
+  </div>
+</body>
+
+<!-- SCRIPT DINÁMICO PARA LAS 9 PREGUNTAS Y PROGRESO -->
+<script>
+  // Las 9 preguntas integradas con su respectiva respuesta correcta (índice 0 a 3)
+  const preguntasJuego = [
+    {
+      categoria: "Encuentra el sinónimo",
+      pregunta: "¿Qué palabra significa lo mismo que feliz?",
+      opciones: ["Triste", "Alegre", "Lento", "Frío"],
+      correcta: 1
+    },
+    {
+      categoria: "Antónimos",
+      pregunta: "¿Cuál es el antónimo (lo opuesto) de la palabra rápido?",
+      opciones: ["Veloz", "Lento", "Alto", "Fuerte"],
+      correcta: 1
+    },
+    {
+      categoria: "Ortografía",
+      pregunta: "Elige la palabra que está escrita correctamente:",
+      opciones: ["Zanahoria", "Sanahoria", "Zanahoriah", "Sanahoriah"],
+      correcta: 0
+    },
+    {
+      categoria: "Sinónimos",
+      pregunta: "¿Cuál de las siguientes palabras es un sinónimo de brillante?",
+      opciones: ["Oscuro", "Luminoso", "Pequeño", "Blando"],
+      correcta: 1
+    },
+    {
+      categoria: "Vocabulario",
+      pregunta: "Identifica la palabra que nombra una fruta:",
+      opciones: ["Silla", "Manzana", "Zapato", "Lápiz"],
+      correcta: 1
+    },
+    {
+      categoria: "Significado",
+      pregunta: "¿Qué significa la palabra gigante?",
+      opciones: ["Muy pequeño", "Muy grande", "Muy rápido", "Muy frío"],
+      correcta: 1
+    },
+    {
+      categoria: "Antónimos",
+      pregunta: "Selecciona el antónimo de la palabra noche:",
+      opciones: ["Tarde", "Día", "Oscuro", "Luna"],
+      correcta: 1
+    },
+    {
+      categoria: "General",
+      pregunta: "¿Cuál es el propósito principal de la plataforma EduGamesKids?",
+      opciones: ["Vender artículos deportivos", "Fomentar el aprendizaje mediante la gamificación", "Ver películas de acción", "Reproducir música"],
+      correcta: 1
+    },
+    {
+      categoria: "Lógica",
+      pregunta: "¿Qué color principal caracteriza la interfaz inspirada en la línea estética de Apple?",
+      opciones: ["Rojo carmesí", "Turquesa vibrante (#00E5FF)", "Verde militar", "Naranja brillante"],
+      correcta: 1
+    }
+  ];
+
+  let indiceActual = 0;
+  let puntajeTotal = 0;
+  let seleccionUsuario = null;
+
+  function cargarPreguntaActual() {
+    seleccionUsuario = null;
+    const q = preguntasJuego[indiceActual];
+
+    // Actualizar textos en pantalla
+    document.getElementById("pregunta-categoria").innerText = q.categoria;
+    document.getElementById("pregunta-texto").innerText = q.pregunta;
+    
+    for (let i = 0; i < 4; i++) {
+      document.getElementById(`opt-text-${i}`).innerText = q.opciones[i];
+    }
+
+    // Quitar estilos seleccionados previos
+    document.querySelectorAll('.option-card').forEach(c => {
+      c.style.borderColor = '';
+      c.style.background = '';
+    });
+
+    // Desactivar botón hasta que elija una opción
+    const btn = document.getElementById("btn-comprobar");
+    btn.setAttribute("disabled", "true");
+    btn.style.opacity = "0.6";
+    btn.style.cursor = "not-allowed";
+
+    document.getElementById("status-msg").innerText = "Ninguna respuesta seleccionada";
+
+    // Actualizar barra de progreso
+    const porcentaje = ((indiceActual) / preguntasJuego.length) * 100;
+    document.getElementById("barra-progreso").style.width = `${porcentaje}%`;
+    document.getElementById("texto-contador").innerText = `Pregunta ${indiceActual + 1} de ${preguntasJuego.length}`;
+    document.getElementById("texto-progreso-num").innerText = `${indiceActual + 1}/${preguntasJuego.length}`;
+  }
+
+  function seleccionarOpcion(index) {
+    seleccionUsuario = index;
+
+    document.querySelectorAll('.option-card').forEach((c, i) => {
+      if (i === index) {
+        c.style.borderColor = '#00E5FF';
+        c.style.background = 'rgba(0, 229, 255, 0.08)';
+      } else {
+        c.style.borderColor = '';
+        c.style.background = '';
+      }
+    });
+
+    const btn = document.getElementById("btn-comprobar");
+    btn.removeAttribute("disabled");
+    btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
+
+    document.getElementById("status-msg").innerText = "¡Opción lista para comprobar!";
+  }
+
+  function comprobarRespuesta() {
+    if (seleccionUsuario === null) return;
+
+    const q = preguntasJuego[indiceActual];
+    if (seleccionUsuario === q.correcta) {
+      puntajeTotal++;
+    }
+
+    indiceActual++;
+
+    if (indiceActual < preguntasJuego.length) {
+      cargarPreguntaActual();
+    } else {
+      mostrarResultadosFinales();
+    }
+  }
+
+  function mostrarResultadosFinales() {
+    document.getElementById("quiz-container").style.display = "none";
+    document.querySelector(".progress-question-bar").style.display = "none";
+
+    const notaFinal = Math.round((puntajeTotal / preguntasJuego.length) * 10);
+    const nombreSofi = localStorage.getItem("usuarioActual") || "Sofi";
+
+    const resBox = document.getElementById("resultado-container");
+    resBox.style.display = "block";
+    resBox.innerHTML = `
+      <h2 style="color: #fff; font-size: 2rem; margin-bottom: 10px;">🎉 ¡Actividad Completada!</h2>
+      <p style="color: #ccc; font-size: 1.1rem;">Muy buen trabajo, ${nombreSofi}. Has terminado todas las preguntas.</p>
+      <div style="font-size: 3.5rem; color: #00E5FF; font-weight: bold; margin: 20px 0;">
+        ${notaFinal} <span style="font-size: 1.5rem; color: #888;">/ 10</span>
+      </div>
+      <p style="color: #fff; margin-bottom: 20px;">Acertaste <strong>${puntajeTotal}</strong> de <strong>${preguntasJuego.length}</strong> preguntas.</p>
+      <button onclick="reiniciarActividad()" style="background: #00E5FF; color: #000; padding: 12px 24px; border-radius: 10px; border: none; font-weight: bold; cursor: pointer; font-size: 1rem;">
+        🔄 Repetir actividad
+      </button>
+    `;
+  }
+
+  function reiniciarActividad() {
+    indiceActual = 0;
+    puntajeTotal = 0;
+    document.getElementById("resultado-container").style.display = "none";
+    document.getElementById("quiz-container").style.display = "grid";
+    document.querySelector(".progress-question-bar").style.display = "flex";
+    cargarPreguntaActual();
+  }
+
+  // Inicializar al cargar la página
+  window.onload = cargarPreguntaActual;
+</script>
+</html>

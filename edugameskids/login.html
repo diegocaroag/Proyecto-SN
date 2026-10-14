@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Entrar a EduGameKids</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-login.css">
+</head>
+<body>
+  <div class="login-screen">
+
+    <!-- DECORACIONES CIRCULARES DE FONDO PASTEL -->
+    <div class="bg-circle circle-top-left"></div>
+    <div class="bg-circle circle-top-right"></div>
+    <div class="bg-circle circle-bottom-left"></div>
+    <div class="bg-circle circle-bottom-right"></div>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+      <div class="header-content">
+        <a href= "index.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link active" href="../../index.html">Inicio</a>
+          
+        </nav>
+      </div>
+    </header>
+
+    <!-- CONTENIDO CENTRAL -->
+    <main class="main-content">
+      <div class="login-container">
+
+        <!-- LADO IZQUIERDO: TARJETA DE BIENVENIDA -->
+        <section class="info-side">
+          <div class="info-card">
+            <div class="badge-welcome">
+              <span class="badge-icon">✨</span>
+              <span>¡Vuelve a tu aventura!</span>
+            </div>
+            <h1 class="info-title">¡Qué bueno verte <span class="highlight-purple">de nuevo!</span></h1>
+            <p class="info-desc">
+              Inicia sesión para continuar tu aventura, jugar y desbloquear nuevas insignias.
+            </p>
+          </div>
+        </section>
+
+        <!-- LADO DERECHO: FORMULARIO Y SELECTOR DE PERFIL -->
+        <section class="form-side">
+          <div class="form-card">
+            <h2 class="form-title">Entrar a <span class="title-brand">EduGameKids</span></h2>
+            <p class="form-subtitle"> inicia sesión.</p>
+
+
+            <!-- FORMULARIO DE INICIO DE SESIÓN -->
+            <form class="login-form" action="#" method="POST">
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="tu correo" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  class="form-input" 
+                  placeholder="••••••••••" 
+                  required
+                >
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>Iniciar sesión</span>
+                <span class="btn-arrow">➔</span>
+              </button>
+
+              <a href="perfiles.html" class="register-link">¿Aún no tienes cuenta? Regístrate aquí</a>
+
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- SCRIPT PARA CAMBIAR EL PERFIL DINÁMICAMENTE -->
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const roleName = document.getElementById('role-name');
+    const roleText = document.getElementById('role-text');
+
+    const roleData = {
+      acudiente: {
+        name: 'acudiente',
+        text: 'Verás el progreso de tu hijo, sus logros y podrás acompañar su avance desde una sola cuenta.'
+      },
+      docente: {
+        name: 'docente',
+        text: 'Podrás gestionar tus grupos, asignar actividades y dar seguimiento detallado a tus estudiantes.'
+      },
+      estudiante: {
+        name: 'estudiante',
+        text: 'Podrás acceder a tus misiones, acumular puntos y explorar todos los juegos educativos.'
+      }
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const role = tab.dataset.role;
+        roleName.textContent = roleData[role].name;
+        roleText.textContent = roleData[role].text;
+      });
+    });
+  </script>
+</body>
+<script src="js/main.js"></script>
+</html>

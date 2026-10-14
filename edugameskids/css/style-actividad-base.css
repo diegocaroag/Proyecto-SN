@@ -1,0 +1,21 @@
+/* EDUGAMESKIDS - ESTILOS BASE DE ACTIVIDADES */
+.activity-screen { background-color: #0b0f19; color: #fff; min-height: 100vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.content { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+.activity-hero-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 24px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.activity-main-title { font-size: 1.8rem; margin: 0 0 5px 0; color: #fff; }
+.activity-main-desc { color: #aaa; margin: 0; font-size: 0.95rem; }
+.activity-tag-badge { background: rgba(0, 229, 255, 0.12); color: #00E5FF; padding: 8px 16px; border-radius: 20px; font-weight: bold; border: 1px solid rgba(0,229,255,0.3); }
+
+/* Progreso */
+.progress-question-bar { display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.03); padding: 15px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+.activity-progress-track { flex-grow: 1; background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden; }
+.activity-progress-fill { background: #00E5FF; height: 100%; transition: width 0.3s ease; }
+
+/* Grid de Actividad */
+.activity-grid-layout { display: grid; grid-template-columns: 320px 1fr; gap: 24px; }
+.left-mission-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+.right-question-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 30px; }
+.options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 20px 0; }
+.option-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 12px; }
+.option-card:hover { border-color: #00E5FF; background: rgba(0, 229, 255, 0.05); }
+.option-letter { background: rgba(255,255,255,0.1); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; }

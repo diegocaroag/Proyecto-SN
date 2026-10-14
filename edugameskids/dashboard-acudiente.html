@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Dashboard de Acudiente</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-dashboard-acudiente.css">
+</head>
+<body>
+  <div class="acudiente-screen">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link active" href="#">Mi hijo/a</a>
+          <a class="nav-link" href="#resultados">Resultados</a>
+          <a class="nav-link" href="#acompanamiento">Acompañamiento</a>
+        </nav>
+
+        <div class="user-profile-dropdown">
+          <div class="avatar-small">
+            <img src="assets/icons/user-icon.svg" alt="Usuario" class="custom-icon">
+          </div>
+          <span class="user-role-text">Acudiente</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- ENCABEZADO DE LA SECCIÓN -->
+      <section class="section-top-banner">
+        <div class="title-group">
+          <h1 class="main-title">Cada pequeño paso cuenta</h1>
+          <p class="main-subtitle">Tu espacio de acudiente para acompañar el aprendizaje de Sofi.</p>
+        </div>
+        <div class="example-badge">
+          <span>Datos de ejemplo</span>
+        </div>
+      </section>
+
+      <!-- TARJETA DE PERFIL DE HIJO/A (SOFI) -->
+      <section class="child-profile-card">
+        <div class="child-info-left">
+          <div class="child-avatar-box">
+            <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="child-img">
+          </div>
+          <div class="child-text-meta">
+            <span class="mi-hijo-tag">MI HIJO/A</span>
+            <h2 class="child-name">Sofi</h2>
+            <p class="child-level">Nivel 4 · Exploradora curiosa</p>
+          </div>
+        </div>
+
+        <div class="child-info-center">
+          <p class="curiosity-quote">¡Su curiosidad la lleva lejos!</p>
+          <span class="quote-sub">Celebra el esfuerzo, no solo las respuestas correctas.</span>
+        </div>
+
+        <div class="child-info-right">
+          <a href="mis-logros.html" class="btn-profile-link">
+            <span>Ver perfil de Sofi</span>
+            <span class="arrow-icon">➔</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- GRID DE MÉTRICAS SUPERIORES (3 TARJETAS) -->
+      <section class="metrics-grid">
+        
+        <!-- TARJETA 1: AVENTURA ACTUAL -->
+        <article class="card metric-card">
+          <div class="metric-header">
+            <h3 class="metric-title">Aventura actual</h3>
+            <span class="metric-icon">🗺️</span>
+          </div>
+          <div class="metric-body">
+            <span class="metric-big-num">64%</span>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill fill-blue" style="width: 64%;"></div>
+            </div>
+            <p class="metric-footer-text">Avance en su recorrido de aprendizaje</p>
+          </div>
+        </article>
+
+        <!-- TARJETA 2: CAMINO AL NIVEL 5 -->
+        <article class="card metric-card">
+          <div class="metric-header">
+            <h3 class="metric-title">Camino al nivel 5</h3>
+            <span class="metric-icon">⭐</span>
+          </div>
+          <div class="metric-body">
+            <div class="points-row">
+              <span class="metric-big-num">240/300</span>
+              <span class="points-unit">puntos</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill fill-orange" style="width: 80%;"></div>
+            </div>
+            <p class="metric-footer-text orange-text">80% de los puntos · Faltan 60 para el nivel 5</p>
+          </div>
+        </article>
+
+        <!-- TARJETA 3: LOGROS DESBLOQUEADOS -->
+        <article class="card metric-card">
+          <div class="metric-header">
+            <h3 class="metric-title">Logros desbloqueados</h3>
+            <span class="metric-icon">🏆</span>
+          </div>
+          <div class="metric-body">
+            <span class="metric-big-num">3 insignias</span>
+            <p class="metric-footer-text mt-spacing">Tres motivos para celebrar su esfuerzo y seguir explorando.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- GRID INFERIOR (2 COLUMNAS PRINCIPALES) -->
+      <div class="dashboard-bottom-grid">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="left-column">
+          
+          <!-- ÚLTIMAS ACTIVIDADES Y RESULTADOS -->
+          <article class="card activities-card">
+            <div class="card-title-row">
+              <div>
+                <h3 class="card-section-title">Últimas actividades y resultados</h3>
+                <p class="card-section-subtitle">Aciertos por materia · descubre qué reforzar y qué celebrar.</p>
+              </div>
+              <a href="#" class="link-view-all">Ver todos los resultados ➔</a>
+            </div>
+
+            <div class="subject-results-list">
+              
+              <!-- MATEMÁTICAS -->
+              <div class="subject-row">
+                <div class="subject-icon-box icon-blue-bg">÷</div>
+                <div class="subject-info-col">
+                  <span class="sub-name">Matemáticas</span>
+                  <span class="sub-detail">Sumas y multiplicaciones</span>
+                </div>
+                <div class="subject-progress-col">
+                  <div class="sub-score-row">
+                    <span class="score-text">9/10 aciertos</span>
+                    <span class="score-pct blue-pct">90%</span>
+                  </div>
+                  <div class="progress-bar-container small-bar">
+                    <div class="progress-bar-fill fill-blue" style="width: 90%;"></div>
+                  </div>
+                  <span class="sub-feedback">Una gran fortaleza</span>
+                </div>
+              </div>
+
+              <!-- LECTURA -->
+              <div class="subject-row">
+                <div class="subject-icon-box icon-orange-bg">Aa</div>
+                <div class="subject-info-col">
+                  <span class="sub-name">Lectura</span>
+                  <span class="sub-detail">Lectura y vocabulario</span>
+                </div>
+                <div class="subject-progress-col">
+                  <div class="sub-score-row">
+                    <span class="score-text">6/8 aciertos</span>
+                    <span class="score-pct orange-pct">75%</span>
+                  </div>
+                  <div class="progress-bar-container small-bar">
+                    <div class="progress-bar-fill fill-orange-dark" style="width: 75%;"></div>
+                  </div>
+                  <span class="sub-feedback">Va por buen camino</span>
+                </div>
+              </div>
+
+              <!-- CIENCIAS -->
+              <div class="subject-row">
+                <div class="subject-icon-box icon-green-bg">✦</div>
+                <div class="subject-info-col">
+                  <span class="sub-name">Ciencias</span>
+                  <span class="sub-detail">Animales, plantas y espacio</span>
+                </div>
+                <div class="subject-progress-col">
+                  <div class="sub-score-row">
+                    <span class="score-text">4/8 aciertos</span>
+                    <span class="score-pct green-pct">50%</span>
+                  </div>
+                  <div class="progress-bar-container small-bar">
+                    <div class="progress-bar-fill fill-green" style="width: 50%;"></div>
+                  </div>
+                  <span class="sub-feedback">Para practicar juntos</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- SUS LOGROS -->
+          <article class="card achievements-preview-card">
+            <div class="card-title-row">
+              <h3 class="card-section-title">Sus logros</h3>
+              <a href="mis-logros.html" class="link-view-all">Ver insignias ➔</a>
+            </div>
+
+            <div class="badges-preview-row">
+              <div class="badge-pill">
+                <span class="badge-icon-small">🚩</span>
+                <span class="badge-name">Primer reto</span>
+              </div>
+              <div class="badge-pill badge-pill-orange">
+                <span class="badge-icon-small">✨</span>
+                <span class="badge-name">Gran curiosidad</span>
+              </div>
+              <div class="badge-pill badge-pill-purple">
+                <span class="badge-icon-small">⭐</span>
+                <span class="badge-name">Sigo intentando</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="right-column">
+          
+          <!-- PARA EXPLORAR JUNTOS -->
+          <article class="card explore-together-card">
+            <div class="explore-header">
+              <span class="explore-icon-bulb">💡</span>
+              <h3 class="card-section-title">Para explorar juntos</h3>
+            </div>
+            <p class="explore-desc">
+              Ciencias es una oportunidad para practicar. Observen una planta y conversen sobre lo que necesita para crecer.
+            </p>
+            <a href="actividades.html" class="explore-action-link">Consultar actividades de Ciencias ➔</a>
+          </article>
+
+          <!-- ORGANIZA SU PRÁCTICA -->
+          <article class="card practice-organizer-card">
+            <h3 class="card-section-title">Organiza su práctica</h3>
+            
+            <!-- META DE PRÁCTICA -->
+            <div class="form-group-custom">
+              <label for="meta-practica" class="custom-label">Meta de práctica</label>
+              <div class="select-wrapper-custom">
+                <select id="meta-practica" name="meta-practica" class="select-field-custom">
+                  <option value="15">⏱️ 15 minutos al día</option>
+                  <option value="20">⏱️ 20 minutos al día</option>
+                  <option value="30">⏱️ 30 minutos al día</option>
+                  <option value="45">⏱️ 45 minutos al día</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- RECORDATORIO -->
+            <div class="form-group-custom">
+              <label for="recordatorio-horario" class="custom-label">Recordatorio</label>
+              <div class="select-wrapper-custom">
+                <select id="recordatorio-horario" name="recordatorio-horario" class="select-field-custom">
+                  <option value="5pm">🔔 Lunes a viernes - 5:00 p. m.</option>
+                  <option value="6pm">🔔 Lunes a viernes - 6:00 p. m.</option>
+                  <option value="7pm">🔔 Lunes a viernes - 7:00 p. m.</option>
+                  <option value="finsemana">🔔 Fines de semana - 10:00 a. m.</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- TOGGLE DE RECORDATORIO -->
+            <div class="toggle-row">
+              <span class="custom-label">Recordatorio activado</span>
+              <label class="switch-container">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-save-acomp">Guardar acompañamiento ✓</button>
+            <p class="acomp-tip">Una rutina breve y amable ayuda a aprender a su ritmo.</p>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- FOOTER DE NOTA -->
+      <footer class="data-note-footer">
+        <span>Datos de ejemplo: el progreso, los resultados y las insignias corresponden al perfil de Sofi. La actividad de muestra no modifica sus 240 puntos.</span>
+        <span class="slogan-right">Jugar. Descubrir. Aprender.</span>
+      </footer>
+
+    </main>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>

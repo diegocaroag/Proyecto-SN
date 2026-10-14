@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Dashboard Estudiante</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-dashboardEst.css">
+</head>
+<body>
+  <div class="dashboard-screen">
+
+    <!-- HEADER / BARRA DE NAVEGACIÓN -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Edugameskids, página de inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link active" href="#" aria-current="page">Inicio</a>
+          <a class="nav-link" href="actividades.html">Actividades</a>
+          <a class="nav-link" href="mis-logros.html">Mis logros</a>
+        </nav>
+
+        <div class="user-profile">
+          <div class="avatar-box">
+            <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="custom-icon">
+          </div>
+          <span class="user-name">Sofi</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DEL DASHBOARD -->
+    <main class="content">
+
+      <!-- BANNER DE BIENVENIDA -->
+      <section class="banner-welcome">
+        <div class="banner-info">
+          <h1 class="welcome-title">¡Hola, Sofi! 👋</h1>
+          <p class="welcome-subtitle">¡Vas genial! Sigue aprendiendo para desbloquear nuevas recompensas.</p>
+        </div>
+        <div class="badge-role">
+          <img src="assets/icons/star-icon.svg" alt="Estrella" class="badge-icon-img">
+          <span>Exploradora curiosa</span>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE PROGRESO Y PUNTOS (2 TARJETAS) -->
+      <section class="progress-section">
+
+        <!-- TARJETA 1: TU AVENTURA DE HOY -->
+        <article class="card progress-card">
+          <div class="card-header">
+            <h2 class="card-title">Tu aventura de hoy</h2>
+            <span class="badge-status badge-success">✓ 64%</span>
+          </div>
+          <p class="level-info">Nivel 4 · Exploradora curiosa</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill fill-green" style="width: 64%;"></div>
+          </div>
+          <div class="card-footer">
+            <button class="btn-primary">Continuar</button>
+            <span class="footer-note">Sigue avanzando para desbloquear más misiones.</span>
+          </div>
+        </article>
+
+        <!-- TARJETA 2: PUNTOS Y NIVEL -->
+        <article class="card points-card">
+          <div class="card-header">
+            <div class="points-headline">
+              <img src="assets/icons/star-icon.svg" alt="Estrella" class="points-icon-img">
+              <span class="points-value">240 puntos</span>
+            </div>
+            <span class="badge-status badge-orange">
+              <img src="assets/icons/star-icon.svg" alt="Estrella" class="mini-icon"> +60 para subir de nivel
+            </span>
+          </div>
+          <p class="points-note">¡Solo faltan 60 para el próximo nivel!</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill fill-orange" style="width: 80%;"></div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- SECCIÓN ELIGE TU PRÓXIMA MISIÓN -->
+      <section class="missions-section">
+        <h2 class="section-title">Elige tu próxima misión</h2>
+
+        <div class="missions-grid">
+
+          <!-- MISIÓN 1: RETO MATEMÁTICO -->
+          <article class="card mission-card">
+            <div class="mission-top">
+              <div class="icon-box icon-blue">
+                <img src="assets/icons/math-icon.svg" alt="Matemáticas" class="mission-icon-img">
+              </div>
+              <span class="badge-tag tag-green">✓ Nuevo</span>
+            </div>
+            <div class="mission-info">
+              <h3 class="mission-title">Reto matemático</h3>
+              <p class="mission-desc">10 preguntas · 5 min</p>
+            </div>
+          </article>
+
+          <!-- MISIÓN 2: PALABRAS MÁGICAS -->
+          <article class="card mission-card">
+            <div class="mission-top">
+              <div class="icon-box icon-orange">
+                <img src="assets/icons/abc-icon.svg" alt="Palabras" class="mission-icon-img">
+              </div>
+              <span class="badge-tag tag-orange">🏷️ Divertido</span>
+            </div>
+            <div class="mission-info">
+              <h3 class="mission-title">Palabras mágicas</h3>
+              <p class="mission-desc">Aprende vocabulario</p>
+            </div>
+          </article>
+
+          <!-- MISIÓN 3: PEQUEÑOS CIENTÍFICOS -->
+          <article class="card mission-card">
+            <div class="mission-top">
+              <div class="icon-box icon-green">
+                <img src="assets/icons/science-icon.svg" alt="Ciencia" class="mission-icon-img">
+              </div>
+              <span class="badge-tag tag-mint">🧪 Ciencia</span>
+            </div>
+            <div class="mission-info">
+              <h3 class="mission-title">Pequeños científicos</h3>
+              <p class="mission-desc">Descubre y responde</p>
+            </div>
+          </article>
+
+          <!-- MISIÓN 4: MI COLECCIÓN -->
+          <article class="card mission-card">
+            <div class="mission-top">
+              <div class="icon-box icon-purple">
+                <img src="assets/icons/badge-icon.svg" alt="Colección" class="mission-icon-img">
+              </div>
+              <span class="badge-tag tag-purple">⭐ Colección</span>
+            </div>
+            <div class="mission-info">
+              <h3 class="mission-title">Mi colección</h3>
+              <p class="mission-desc">3 insignias obtenidas</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>

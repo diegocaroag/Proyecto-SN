@@ -1,0 +1,494 @@
+/* --- RESET & VARIABLES BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+  background-color: #f7f9fd;
+  color: #24304f;
+}
+
+.activity-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+/* --- HEADER --- */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7eaf4;
+}
+
+.header-content {
+  max-width: 1360px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 56px;
+  height: 44px;
+  background-color: #287bf4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #24304f;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #7b849c;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link.active {
+  color: #287bf4;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.avatar-box {
+  width: 44px;
+  height: 44px;
+  background-color: #f2f0fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.custom-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #24304f;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.content {
+  width: 100%;
+  max-width: 1360px;
+  padding: 24px 40px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO DE RETROCESO */
+.top-activity-header {
+  display: flex;
+  align-items: center;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #287bf4;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.separator {
+  color: #7b849c;
+  font-weight: 400;
+}
+
+.sub-category {
+  color: #7b849c;
+  font-weight: 400;
+}
+
+/* TARJETA HERO DE LA ACTIVIDAD */
+.activity-hero-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e7eaf4;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 8px 20px rgba(36, 48, 79, 0.03);
+}
+
+.activity-main-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 28px;
+  color: #24304f;
+  margin-bottom: 4px;
+}
+
+.activity-main-desc {
+  font-size: 15px;
+  color: #7b849c;
+}
+
+.activity-tag-badge {
+  background-color: #fff8d9;
+  color: #ff8a25;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* BARRA DE PROGRESO */
+.progress-question-bar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e7eaf4;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 4px 12px rgba(36, 48, 79, 0.02);
+}
+
+.question-counter-text, .question-total-text {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #24304f;
+  white-space: nowrap;
+}
+
+.activity-progress-track {
+  flex: 1;
+  height: 12px;
+  background-color: #eef2fa;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.activity-progress-fill {
+  height: 100%;
+  background-color: #ff8a25; /* Naranja característico de la actividad */
+  border-radius: 999px;
+}
+
+/* --- GRID PRINCIPAL (2 COLUMNAS) --- */
+.activity-grid-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* TARJETA IZQUIERDA: MISIÓN */
+.left-mission-card {
+  background: linear-gradient(135deg, #fffbf2 0%, #fff6e0 100%);
+  border: 1px solid #ffe8cc;
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mission-icon-box {
+  width: 72px;
+  height: 72px;
+  background-color: #ff8a25;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 20px rgba(255, 138, 37, 0.25);
+  margin-bottom: 4px;
+}
+
+.mission-img-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.mission-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 24px;
+  color: #24304f;
+}
+
+.mission-desc {
+  font-size: 14px;
+  color: #7b849c;
+  line-height: 1.5;
+}
+
+.mission-tip-box {
+  background-color: #ffffff;
+  border: 1px solid #ffe8cc;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.tip-heart {
+  font-size: 16px;
+}
+
+.tip-text {
+  font-size: 13px;
+  color: #7b849c;
+  line-height: 1.4;
+}
+
+.mission-footer-text {
+  font-size: 12px;
+  color: #b8730a;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* TARJETA DERECHA: PREGUNTA Y OPCIONES */
+.right-question-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  border: 1px solid #e7eaf4;
+  padding: 36px;
+  box-shadow: 0px 12px 32px rgba(36, 48, 79, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.question-category-tag {
+  display: inline-block;
+  background-color: #fff3e0;
+  color: #ff8a25;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.question-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 26px;
+  color: #24304f;
+}
+
+.question-subtitle {
+  font-size: 14px;
+  color: #7b849c;
+  margin-top: -16px;
+}
+
+/* GRID DE OPCIONES (2x2) */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.option-card {
+  background-color: #ffffff;
+  border: 2px solid #e7eaf4;
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-card:hover {
+  border-color: #ff8a25;
+  background-color: #fffbf8;
+}
+
+.option-letter {
+  width: 32px;
+  height: 32px;
+  background-color: #f2f5fc;
+  color: #24304f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.option-text {
+  flex: 1;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #24304f;
+}
+
+.option-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d7dce8;
+  border-radius: 50%;
+}
+
+/* CAJA DE FEEDBACK INFERIOR */
+.feedback-action-box {
+  background-color: #f2f6fe;
+  border: 1px solid #dbe8fd;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.feedback-prompt-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: #287bf4;
+}
+
+.feedback-prompt-text strong {
+  display: block;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.feedback-prompt-text p {
+  color: #5a6582;
+}
+
+.prompt-icon {
+  font-size: 20px;
+}
+
+.status-helper-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-msg {
+  font-size: 13px;
+  color: #7b849c;
+}
+
+.btn-check-answer {
+  background-color: #d7dce8;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* PIE DE PÁGINA NOTA */
+.activity-footer-note {
+  text-align: center;
+  font-size: 13px;
+  color: #7b849c;
+  border-top: 1px dashed #d7dce8;
+  padding-top: 20px;
+  margin-top: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .activity-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  .feedback-action-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .status-helper-row {
+    justify-content: space-between;
+  }
+  .activity-hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .header-content, .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

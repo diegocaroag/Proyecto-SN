@@ -1,0 +1,438 @@
+/* --- RESET Y ESTILOS BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+  background-color: #f7f9fd;
+  color: #24304f;
+  overflow-x: hidden;
+}
+
+.register-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+/* --- DECORACIONES CIRCULARES PASTEL DE FONDO --- */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.circle-top-left {
+  width: 320px;
+  height: 320px;
+  background-color: #e2f6eb; /* Verde menta muy suave */
+  top: -80px;
+  left: -80px;
+  opacity: 0.6;
+}
+
+.circle-top-right {
+  width: 360px;
+  height: 360px;
+  background-color: #e0d5f9; /* Púrpura pastel suave */
+  top: -100px;
+  right: -80px;
+  opacity: 0.6;
+}
+
+.circle-bottom-left {
+  width: 380px;
+  height: 380px;
+  background-color: #fcebd9; /* Durazno suave */
+  bottom: -100px;
+  left: -80px;
+  opacity: 0.7;
+}
+
+.circle-bottom-right {
+  width: 400px;
+  height: 400px;
+  background-color: #e2e8fc; /* Azul lavanda */
+  bottom: -120px;
+  right: 60px;
+  opacity: 0.7;
+}
+
+/* --- HEADER --- */
+.header {
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-content {
+  max-width: 1360px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* LOGO BOX DE 56px x 44px */
+.logo-box {
+  width: 56px;
+  height: 44px;
+  background-color: #287bf4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #24304f;
+}
+
+.auth-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-text {
+  font-size: 14px;
+  color: #7b849c;
+}
+
+.btn-login {
+  padding: 10px 24px;
+  background-color: #ffffff;
+  color: #287bf4;
+  border: 2px solid #287bf4;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #f0f6ff;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 32px 40px 64px 40px;
+}
+
+.register-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 48px;
+}
+
+/* --- LADO IZQUIERDO: INFORMACIÓN --- */
+.info-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.info-card {
+  background-color: transparent;
+  padding: 20px 0;
+  max-width: 480px;
+}
+
+.badge-docente {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #f0eafe;
+  color: #8055e9;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.badge-icon {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.info-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: #24304f;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.info-desc {
+  font-size: 17px;
+  color: #7b849c;
+  line-height: 1.5;
+}
+
+/* --- LADO DERECHO: FORMULARIO --- */
+.form-side {
+  width: 100%;
+  max-width: 520px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 36px 40px;
+  box-shadow: 0px 16px 40px rgba(36, 48, 79, 0.06);
+  border: 1px solid #e7eaf4;
+}
+
+/* TÍTULO DOCENTE CON FONDO PÚRPURA SUAVE */
+.form-header-badge {
+  background-color: #f8f6fe;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #8055e9; /* Texto morado docente */
+  margin-bottom: 4px;
+}
+
+.form-subtitle {
+  font-size: 13px;
+  color: #8055e9;
+  opacity: 0.85;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-label {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #24304f;
+}
+
+.sub-label {
+  font-size: 12px;
+  color: #24304f;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  background-color: #f7f9fd;
+  border: 1px solid #e7eaf4;
+  border-radius: 12px;
+  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #24304f;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-input::placeholder {
+  color: #a0a7b8;
+}
+
+.form-input:focus {
+  border-color: #8055e9; /* Borde morado docente */
+  background-color: #ffffff;
+}
+
+/* CAJA DE ASIGNATURAS/ESPECIALIDAD */
+.subjects-box {
+  background-color: #f8faff;
+  border: 1px solid #e7eaf4;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subjects-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subjects-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #24304f;
+}
+
+.subjects-note {
+  font-size: 12px;
+  color: #8055e9;
+  font-weight: 600;
+}
+
+.available-subjects {
+  font-size: 11px;
+  color: #8055e9;
+  margin-top: 2px;
+}
+
+/* SELECT PERSONALIZADO */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.select-wrapper::after {
+  content: "❯";
+  font-size: 11px;
+  color: #7b849c;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -7px;
+  pointer-events: none;
+}
+
+/* CAMPOS DE DOCUMENTO (FILA DE 2 COLUMNAS) */
+.doc-row {
+  display: flex;
+  gap: 12px;
+}
+
+.doc-col-type {
+  width: 38%;
+}
+
+.doc-col-num {
+  width: 62%;
+}
+
+/* BOTÓN DE CREAR CUENTA CON DEGRADADO AZUL/MORADO */
+.btn-submit {
+  width: 100%;
+  height: 52px;
+  background: linear-gradient(135deg, #8055e9 0%, #287bf4 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0px 10px 24px rgba(128, 85, 233, 0.3);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .register-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-side {
+    padding-top: 0;
+    align-items: center;
+  }
+  .info-card {
+    max-width: 100%;
+    text-align: center;
+  }
+  .badge-docente {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content, .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-card {
+    padding: 28px 20px;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,420 @@
+/* --- RESET Y ESTILOS BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+  background-color: #f7f9fd;
+  color: #24304f;
+  overflow-x: hidden;
+}
+
+.login-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+/* --- DECORACIONES CIRCULARES PASTEL DE FONDO --- */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.circle-top-left {
+  width: 320px;
+  height: 320px;
+  background-color: #dbe8fd; /* Azul suave */
+  top: -80px;
+  left: -80px;
+  opacity: 0.7;
+}
+
+.circle-top-right {
+  width: 380px;
+  height: 380px;
+  background-color: #d6f2e3; /* Verde menta */
+  top: -100px;
+  right: -80px;
+  opacity: 0.7;
+}
+
+.circle-bottom-left {
+  width: 380px;
+  height: 380px;
+  background-color: #e0d5f9; /* Lila suave */
+  bottom: -100px;
+  left: -80px;
+  opacity: 0.7;
+}
+
+.circle-bottom-right {
+  width: 380px;
+  height: 380px;
+  background-color: #fcebd9; /* Durazno pastel */
+  bottom: -100px;
+  right: -60px;
+  opacity: 0.8;
+}
+
+/* --- HEADER --- */
+.header {
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-content {
+  max-width: 1360px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* LOGO BOX 56px x 44px */
+.logo-box {
+  width: 56px;
+  height: 44px;
+  background-color: #287bf4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #24304f;
+}
+
+/* NAVEGACIÓN EN PÍLDORA */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #e7eaf4;
+  box-shadow: 0px 4px 12px rgba(36, 48, 79, 0.03);
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #7b849c;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.nav-link.active {
+  background-color: #f0f4fe;
+  color: #287bf4;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 32px 40px 64px 40px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 48px;
+}
+
+/* --- LADO IZQUIERDO: BIENVENIDA --- */
+.info-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0px 12px 32px rgba(36, 48, 79, 0.04);
+  max-width: 480px;
+  border: 1px solid #e7eaf4;
+}
+
+.badge-welcome {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #fff3e0;
+  color: #ff8a25;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.info-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: #24304f;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.highlight-purple {
+  color: #8055e9;
+}
+
+.info-desc {
+  font-size: 17px;
+  color: #7b849c;
+  line-height: 1.5;
+}
+
+/* --- LADO DERECHO: FORMULARIO --- */
+.form-side {
+  width: 100%;
+  max-width: 480px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 36px 40px;
+  box-shadow: 0px 16px 40px rgba(36, 48, 79, 0.06);
+  border: 1px solid #e7eaf4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #24304f;
+  text-align: center;
+}
+
+.title-brand {
+  color: #8055e9;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #7b849c;
+  text-align: center;
+  margin-top: -12px;
+}
+
+/* PESTAÑAS DE PERFIL */
+.profile-tabs {
+  display: flex;
+  background-color: #f4f6fc;
+  border-radius: 16px;
+  padding: 6px;
+  gap: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #24304f;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  border: 2px solid #ff8a25; /* Borde naranja de la pestaña activa en Figma */
+  box-shadow: 0px 4px 12px rgba(36, 48, 79, 0.05);
+}
+
+/* CAJITA INFORMATIVA DEL PERFIL */
+.role-info-box {
+  background-color: #fffde7;
+  border: 1px solid #ffe8cc;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.role-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff8a25;
+}
+
+.role-desc {
+  font-size: 12px;
+  color: #997a00;
+  line-height: 1.4;
+}
+
+/* FORMULARIO */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #24304f;
+}
+
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  background-color: #f7f9fd;
+  border: 1px solid #e7eaf4;
+  border-radius: 12px;
+  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #24304f;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input::placeholder {
+  color: #a0a7b8;
+}
+
+.form-input:focus {
+  border-color: #8055e9;
+  background-color: #ffffff;
+}
+
+/* BOTÓN DE ENTRAR */
+.btn-submit {
+  width: 100%;
+  height: 50px;
+  background-color: #8055e9; /* Morado de iniciar sesión */
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0px 8px 20px rgba(128, 85, 233, 0.3);
+  transition: opacity 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-arrow {
+  font-size: 16px;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 13px;
+  color: #8055e9;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-card {
+    max-width: 100%;
+    text-align: center;
+  }
+  .badge-welcome {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content, .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-card {
+    padding: 28px 20px;
+  }
+  .nav {
+    display: none;
+  }
+}

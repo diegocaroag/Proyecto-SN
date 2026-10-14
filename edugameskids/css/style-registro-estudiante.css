@@ -1,0 +1,388 @@
+/* --- RESET Y ESTILOS BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+  background-color: #f7f9fd;
+  color: #24304f;
+  overflow-x: hidden;
+}
+
+.register-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+/* --- DECORACIONES CIRCULARES PASTEL DE FONDO --- */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.circle-top-left {
+  width: 320px;
+  height: 320px;
+  background-color: #e3d9fc; /* Lila pastel */
+  top: -80px;
+  left: -80px;
+  opacity: 0.6;
+}
+
+.circle-top-right {
+  width: 380px;
+  height: 380px;
+  background-color: #fcebd9; /* Naranja/durazno pastel */
+  top: -100px;
+  right: -80px;
+  opacity: 0.7;
+}
+
+.circle-bottom-left {
+  width: 400px;
+  height: 400px;
+  background-color: #dbe8fd; /* Azul pastel */
+  bottom: -120px;
+  left: -100px;
+  opacity: 0.8;
+}
+
+.circle-bottom-right {
+  width: 360px;
+  height: 360px;
+  background-color: #d6f2e3; /* Verde menta pastel */
+  bottom: -100px;
+  right: 100px;
+  opacity: 0.8;
+}
+
+/* --- HEADER --- */
+.header {
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-content {
+  max-width: 1360px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 52px;
+  height: 42px;
+  background-color: #ffffff;
+  border-radius: 12px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(36, 48, 79, 0.08); 
+  border: 1px solid #e7eaf4;
+  padding: 4px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  border-radius: 8px;
+}
+.brand-name {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #24304f;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  color: #7b849c;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link.active {
+  color: #287bf4;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #287bf4;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 32px 40px 64px 40px;
+}
+
+.register-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 48px;
+}
+
+/* --- LADO IZQUIERDO: INFORMACIÓN --- */
+.info-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0px 12px 32px rgba(36, 48, 79, 0.04);
+  max-width: 480px;
+  border: 1px solid #e7eaf4;
+}
+
+.badge-adventure {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: #fff3e0;
+  color: #ff8a25;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.info-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: #24304f;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.info-desc {
+  font-size: 18px;
+  color: #7b849c;
+  line-height: 1.5;
+}
+
+/* --- LADO DERECHO: FORMULARIO --- */
+.form-side {
+  width: 100%;
+  max-width: 480px;
+}
+
+.form-card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 36px 40px;
+  box-shadow: 0px 16px 40px rgba(36, 48, 79, 0.06);
+  border: 1px solid #e7eaf4;
+}
+
+.form-title {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #24304f;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #7b849c;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #24304f;
+}
+
+.sub-label {
+  font-size: 12px;
+  color: #7b849c;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  background-color: #f7f9fd;
+  border: 1px solid #e7eaf4;
+  border-radius: 12px;
+  font-family: "Inter-Regular", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #24304f;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-input::placeholder {
+  color: #a0a7b8;
+}
+
+.form-input:focus {
+  border-color: #2eb86d; /* Borde verde estudiante al enfocar */
+  background-color: #ffffff;
+}
+
+/* CUSTOM SELECT WITH ARROW */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.select-wrapper::after {
+  content: "❯";
+  font-size: 11px;
+  color: #7b849c;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -7px;
+  pointer-events: none;
+}
+
+/* CAMPOS DE DOCUMENTO (FILA DE 2 COLUMNAS) */
+.doc-row {
+  display: flex;
+  gap: 12px;
+}
+
+.doc-col-type {
+  width: 40%;
+}
+
+.doc-col-num {
+  width: 60%;
+}
+
+/* BOTÓN DE CREAR CUENTA */
+.btn-submit {
+  width: 100%;
+  height: 50px;
+  background-color: #2eb86d; /* Verde característico de estudiante */
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: "Inter-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0px 8px 20px rgba(46, 184, 109, 0.25);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+  background-color: #25a05e;
+  transform: translateY(-1px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .register-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-side {
+    padding-top: 0;
+    align-items: center;
+  }
+  .info-card {
+    max-width: 100%;
+    text-align: center;
+  }
+  .badge-adventure {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content, .main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-card {
+    padding: 28px 20px;
+  }
+  .nav {
+    display: none; /* Ocultar menú en pantallas muy pequeñas */
+  }
+}

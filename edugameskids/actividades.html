@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Actividades educativas</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-actividades.css">
+</head>
+<body>
+  <div class="actividades-screen">
+
+    <!-- HEADER / NAVEGACIÓN PRINCIPAL -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link" href="dashboardEstudiante.html">Inicio</a>
+          <a class="nav-link active" href="actividades.html" aria-current="page">Actividades</a>
+          <a class="nav-link" href="">Actividades docentes</a>
+          <a class="nav-link" href="mis-logros.html">Mis logros</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="streak-badge">
+            <span class="fire-icon">🔥</span>
+            <span>0 días de racha</span>
+          </div>
+
+          <div class="user-profile">
+            <div class="avatar-box">
+              <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="custom-icon">
+            </div>
+            <span class="user-name">Sofi</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- ENCABEZADO DE LA SECCIÓN -->
+      <section class="section-title-box">
+        <h1 class="main-title">Actividades educativas</h1>
+        <p class="main-subtitle">Elige un tema y gana puntos completando cada desafío.</p>
+      </section>
+
+      <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+      <section class="search-filter-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Buscar actividades..." 
+            aria-label="Buscar actividades"
+          >
+        </div>
+
+        <button class="filter-btn">
+          <span class="filter-icon">⚙️</span>
+          <span>Todas las categorías</span>
+        </button>
+      </section>
+
+      <!-- GRID DE ACTIVIDADES (6 TARJETAS) -->
+      <section class="activities-grid">
+
+        <!-- 1. AVENTURA MATEMÁTICA -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-blue">
+              <img src="assets/icons/math-icon.svg" alt="Matemáticas" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-blue">⭐ 10 preguntas</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Aventura matemática</h2>
+            <p class="activity-desc">Sumas y multiplicaciones</p>
+          </div>
+          <a href="l" class="btn-action btn-blue">Jugar ahora</a>
+        </article>
+
+        <!-- 2. PALABRAS MÁGICAS -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-orange">
+              <img src="assets/icons/abc-icon.svg" alt="Palabras" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-orange">⭐ 8 preguntas</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Palabras mágicas</h2>
+            <p class="activity-desc">Lectura y vocabulario</p>
+          </div>
+          <a href="actividad-palabras.html" class="btn-action btn-orange">Jugar ahora</a>
+          
+        </article>
+
+        <!-- 3. MUNDO DE LAS CIENCIAS -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-green">
+              <img src="assets/icons/science-icon.svg" alt="Ciencias" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-green">⭐ 8 preguntas</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Mundo de las ciencias</h2>
+            <p class="activity-desc">Animales, plantas y espacio</p>
+          </div>
+          <a href="a" class="btn-action btn-green">Jugar ahora</a>
+        </article>
+
+        <!-- 4. DETECTIVES DE LETRAS -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-purple">
+              <img src="assets/icons/letters-icon.svg" alt="Ortografía" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-purple">⭐ 6 preguntas</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Detectives de letras</h2>
+            <p class="activity-desc">Ortografía y comprensión</p>
+          </div>
+         <a href="a" class="btn-action btn-purple">Jugar ahora</a>
+        </article>
+
+        <!-- 5. RETO RELÁMPAGO -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-green">
+              <img src="assets/icons/lightning-icon.svg" alt="Rápido" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-green">⚡ 3 minutos</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Reto relámpago</h2>
+            <p class="activity-desc">Preguntas rápidas</p>
+          </div>
+         <a href="" class="btn-action btn-green">Jugar ahora</a>
+        </article>
+
+        <!-- 6. MISIÓN DEL DÍA -->
+        <article class="card activity-card">
+          <div class="card-header">
+            <div class="icon-box icon-orange">
+              <img src="assets/icons/star-icon.svg" alt="Misión" class="activity-icon-img">
+            </div>
+            <span class="badge-tag tag-orange">⭐ objetivo diario</span>
+          </div>
+          <div class="card-body">
+            <h2 class="activity-title">Misión del día</h2>
+            <p class="activity-desc">Completa tu objetivo diario</p>
+          </div>
+         <a href="" class="btn-action btn-orange">Jugar ahora</a>
+        </article>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>

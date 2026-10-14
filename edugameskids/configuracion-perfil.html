@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDUGAMESKIDS - Configuración de perfil</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/style-configuracion-perfil.css">
+</head>
+<body>
+  <div class="config-screen">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Edugameskids, inicio">
+          <div class="logo-box">
+            <img class="logo-img" src="assets/img/logo_pg.png" alt="Logotipo Edugameskids">
+          </div>
+          <span class="brand-name">EDUGAMESKIDS</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav-link" href="dashboard-estudiante.html">Inicio</a>
+          <a class="nav-link" href="actividades.html">Actividades</a>
+          <a class="nav-link" href="mis-logros.html">Mis logros</a>
+        </nav>
+
+        <div class="header-right-group">
+          <div class="streak-badge">
+            <span class="fire-icon">🔥</span>
+            <span>0 días de racha</span>
+          </div>
+
+          <div class="user-profile">
+            <div class="avatar-box">
+              <img src="assets/img/avatar-sofi.png" alt="Avatar de Sofi" class="custom-icon">
+            </div>
+            <span class="user-name">Sofi</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+      <!-- ENCABEZADO DE CONFIGURACIÓN -->
+      <section class="config-header-section">
+        <span class="breadcrumb-trail">Mi perfil / Configuración</span>
+        <h1 class="main-title">Configuración de perfil</h1>
+        <p class="main-subtitle">Edita los datos del estudiante, docente y acudiente, y elige una foto o un avatar.</p>
+      </section>
+
+      <!-- SECCIÓN 1: FOTO O AVATAR -->
+      <section class="card avatar-section-card">
+        <div class="avatar-card-title-row">
+          <h2 class="card-title">Tu foto o avatar</h2>
+          <span class="helper-text-right">Elige una opción para tu imagen de perfil.</span>
+        </div>
+
+        <div class="avatar-options-grid">
+          
+          <!-- CAJA IZQUIERDA: USAR UNA FOTO -->
+          <div class="photo-upload-box">
+            <div class="photo-preview-wrap">
+              <div class="big-avatar-circle">
+                <span class="big-avatar-emoji">🐱</span>
+              </div>
+              <div class="avatar-meta-info">
+                <span class="profile-real-name">Sofi</span>
+                <span class="avatar-status-label">Avatar actual</span>
+              </div>
+            </div>
+
+            <div class="divider-vertical"></div>
+
+            <div class="upload-controls-col">
+              <label class="radio-label-group">
+                <input type="radio" name="avatar-choice" class="custom-radio">
+                <span class="radio-text-bold">Usar una foto</span>
+              </label>
+              <p class="upload-sub">Sube una imagen desde tu dispositivo.</p>
+              
+              <button class="btn-upload-file">
+                <span>📁 Subir foto</span>
+              </button>
+              <span class="file-specs-hint">JPG o PNG · Máximo 5 MB</span>
+            </div>
+          </div>
+
+          <!-- CAJA DERECHA: USAR UN AVATAR -->
+          <div class="avatar-selection-box">
+            <label class="radio-label-group selected-radio-row">
+              <input type="radio" name="avatar-choice" class="custom-radio" checked>
+              <span class="radio-text-bold">Usar un avatar</span>
+            </label>
+
+            <div class="avatars-row-preview">
+              
+              <!-- GATO (SELECCIONADO) -->
+              <div class="avatar-choice-item active">
+                <div class="avatar-choice-circle">🐱</div>
+                <span class="choice-name">Gato</span>
+                <span class="choice-hint">Gato seleccionado</span>
+              </div>
+
+              <!-- OSO -->
+              <div class="avatar-choice-item">
+                <div class="avatar-choice-circle">🐻</div>
+                <span class="choice-name">Oso</span>
+              </div>
+
+              <!-- CONEJO -->
+              <div class="avatar-choice-item">
+                <div class="avatar-choice-circle">🐰</div>
+                <span class="choice-name">Conejo</span>
+              </div>
+
+              <!-- PANDA -->
+              <div class="avatar-choice-item">
+                <div class="avatar-choice-circle">🐼</div>
+                <span class="choice-name">Panda</span>
+              </div>
+
+              <!-- ZORRO -->
+              <div class="avatar-choice-item">
+                <div class="avatar-choice-circle">🦊</div>
+                <span class="choice-name">Zorro</span>
+              </div>
+
+              <!-- LEÓN -->
+              <div class="avatar-choice-item">
+                <div class="avatar-choice-circle">🦁</div>
+                <span class="choice-name">León</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: DATOS DE LOS PERFILES (3 COLUMNAS) -->
+      <section class="card profiles-data-card">
+        <div class="profiles-header-row">
+          <h2 class="card-title">Datos de los perfiles</h2>
+          <span class="mandatory-hint">* Campo obligatorio en el rol que edites</span>
+        </div>
+
+        <div class="three-columns-grid">
+          
+          <!-- COLUMNA 1: ESTUDIANTE -->
+          <div class="profile-column-box">
+            <div class="col-title-header">
+              <div class="col-icon-badge icon-blue-bg">🎓</div>
+              <div>
+                <h3 class="role-col-title">Estudiante</h3>
+                <span class="role-col-sub">Identidad y datos escolares</span>
+              </div>
+            </div>
+
+            <div class="form-fields-stack">
+              <div class="field-group">
+                <label class="field-label">Nombre visible *</label>
+                <input type="text" class="input-field" value="Sofi">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Nombres *</label>
+                <input type="text" class="input-field" placeholder="Escribe los nombres">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Apellidos *</label>
+                <input type="text" class="input-field" placeholder="Escribe los apellidos">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Fecha de nacimiento *</label>
+                <div class="input-with-icon">
+                  <input type="text" class="input-field" value="DD / MM / AAAA">
+                  <span class="input-icon-right">📅</span>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Institución educativa *</label>
+                <input type="text" class="input-field" placeholder="Nombre de la institución">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Grado escolar *</label>
+                <div class="select-wrapper">
+                  <select class="select-field">
+                    <option>Selecciona el grado</option>
+                    <option>Primero de primaria</option>
+                    <option>Segundo de primaria</option>
+                    <option>Tercero de primaria</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Grupo <span class="optional-text">(opcional)</span></label>
+                <input type="text" class="input-field" placeholder="Escribe el grupo">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Correo electrónico <span class="optional-text">(opcional)</span></label>
+                <input type="email" class="input-field" placeholder="Correo del estudiante">
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA 2: DOCENTE -->
+          <div class="profile-column-box">
+            <div class="col-title-header">
+              <div class="col-icon-badge icon-purple-bg">📚</div>
+              <div>
+                <h3 class="role-col-title">Docente</h3>
+                <span class="role-col-sub">Contacto e información académica</span>
+              </div>
+            </div>
+
+            <div class="form-fields-stack">
+              <div class="field-group">
+                <label class="field-label">Nombres *</label>
+                <input type="text" class="input-field" placeholder="Escribe los nombres">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Apellidos *</label>
+                <input type="text" class="input-field" placeholder="Escribe los apellidos">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Correo electrónico *</label>
+                <input type="email" class="input-field" placeholder="Correo del docente">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Teléfono <span class="optional-text">(opcional)</span></label>
+                <input type="text" class="input-field" placeholder="Número de contacto">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Institución educativa *</label>
+                <input type="text" class="input-field" placeholder="Nombre de la institución">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Área o asignatura *</label>
+                <input type="text" class="input-field" placeholder="Escribe el área que enseñas">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Grados a cargo *</label>
+                <div class="select-wrapper">
+                  <select class="select-field">
+                    <option>Selecciona los grados</option>
+                    <option>Primaria completa</option>
+                    <option>Grados 3ro y 4to</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Grupos a cargo <span class="optional-text">(opcional)</span></label>
+                <input type="text" class="input-field" placeholder="Escribe los grupos">
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA 3: ACUDIENTE -->
+          <div class="profile-column-box">
+            <div class="col-title-header">
+              <div class="col-icon-badge icon-green-bg">👤</div>
+              <div>
+                <h3 class="role-col-title">Acudiente</h3>
+                <span class="role-col-sub">Contacto y vínculo con el estudiante</span>
+              </div>
+            </div>
+
+            <div class="form-fields-stack">
+              <div class="field-group">
+                <label class="field-label">Nombres *</label>
+                <input type="text" class="input-field" placeholder="Escribe los nombres">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Apellidos *</label>
+                <input type="text" class="input-field" placeholder="Escribe los apellidos">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Correo electrónico *</label>
+                <input type="email" class="input-field" placeholder="Correo del acudiente">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Teléfono de contacto *</label>
+                <input type="text" class="input-field" placeholder="Número de contacto">
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Parentesco o relación *</label>
+                <div class="select-wrapper">
+                  <select class="select-field">
+                    <option>Selecciona la relación</option>
+                    <option>Madre / Padre</option>
+                    <option>Tutor legal</option>
+                    <option>Familiar cercano</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Estudiante asociado *</label>
+                <div class="select-wrapper">
+                  <select class="select-field">
+                    <option>Selecciona un estudiante</option>
+                    <option>Sofi</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Medio de contacto preferido *</label>
+                <div class="select-wrapper">
+                  <select class="select-field">
+                    <option>Selecciona un medio</option>
+                    <option>Correo electrónico</option>
+                    <option>WhatsApp / Teléfono</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label">Ciudad <span class="optional-text">(opcional)</span></label>
+                <input type="text" class="input-field" placeholder="Escribe la ciudad">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BARRA INFERIOR DE ACCIÓN -->
+      <section class="card bottom-action-bar">
+        <div class="action-bar-content">
+          <div class="action-bar-left-text">
+            <span class="shield-icon">🛡️</span>
+            <div>
+              <strong>Comparte solo la información necesaria.</strong>
+              <p>Si eres estudiante, pide ayuda a tu acudiente para editar tus datos.</p>
+            </div>
+          </div>
+
+          <div class="action-buttons-row">
+            <button class="btn-cancel">Cancelar</button>
+            <button class="btn-save-changes">Guardar cambios ✓</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+<script src="js/main.js"></script>
+</html>
